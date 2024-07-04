@@ -42,4 +42,10 @@ internal class StatusController(JobScopeManager jobProcessorScopeManager)
     {
         return Ok(_jobProcessorScopeManager.State.GetDisplayName());
     }
+
+    [HttpGet("detail", Name = "DetailStatus")]
+    public IActionResult GetPcsJobProcessorDetailStatus()
+    {
+        return Ok(_jobProcessorScopeManager.State.GetDisplayName());
+    }
 }
